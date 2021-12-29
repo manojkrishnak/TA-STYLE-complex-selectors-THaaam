@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Manoj">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/65f4240069.js" crossorigin="anonymous"></script>
+    <title>TrackL - Complex selectors</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container flex justify-sb align-ct">
+            <a class="brand" href="#">
+                <h3>TrackL</h3>
+            </a>
+            <label class="hamburger-icon" for="hamburger-btn"><i class="fas fa-bars fa-2x"></i></label>
+            <input type="checkbox" class="hamburger-btn" id="hamburger-btn">
+            <nav class="navbar">
+                <ul class="nav-items flex justify-sb">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content container flex align-ct justify-ct flex-dir-col">
+                <h1 class="heading">Track the Learning Process Schedule</h1>
+                <a class="btn trial-btn" href="#">Get 30 Days Trial</a>
+            </div>
+            <div class="hero-img">
+                <img src="./assets/images/hero.png" alt="hero-img">
+            </div>
+        </section>
+        <div class="container">
+            <!-- links -->
+            <section class="links">
+                <div class="flex justify-sb">
+                    <a href="#.pdf">PDF file</a>
+                    <a href="#.docx">word file</a>
+                    <a href="#.png">image file</a>
+                    <a href="#.mp4">video file</a>
+                </div>
+            </section>
+            <hr>
+            <!-- analytics graph -->
+            <section class="analytics">
+                <article class="flex justify-sb">
+                    <div class="flex-30">
+                        <h3 class="analytics-heading">Monitor your learning and improve it</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus repellendus numquam necessitatibus impedit commodi voluptatem repellendus numquam necessitatibus impedit.</p>
+                        <a class="learn-btn" href="#">Learn more</a>
+                    </div>
+                    <figure class="flex-48">
+                        <img src="./assets/images/learning-graph.png" alt="learning graph">
+                    </figure>
+                </article>
+            </section>
+            <!-- weekly table -->
+            <section class="score-table">
+                <h3 class="secondary-heading table-heading">Weekly score</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Days</th>
+                            <th>Course</th>
+                            <th>Score(0-100)</th>
+                            <th>Hours spent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Product design</td>
+                            <td>40</td>
+                            <td>2 Hours 30 Min</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Product design</td>
+                            <td>40</td>
+                            <td>2 Hours 30 Min</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Product design</td>
+                            <td>40</td>
+                            <td>2 Hours 30 Min</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>Product design</td>
+                            <td>40</td>
+                            <td>2 Hours 30 Min</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Product design</td>
+                            <td>40</td>
+                            <td>2 Hours 30 Min</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Product design</td>
+                            <td>40</td>
+                            <td>2 Hours 30 Min</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Product design</td>
+                            <td>40</td>
+                            <td>2 Hours 30 Min</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <!-- price-plan -->
+            <section class="plan">
+                <div class="flex align-ct justify-ct flex-dir-col">
+                    <h2 class="secondary-heading heading-clr price-plan-heading">Join us and let's study with your
+                        friends</h2>
+                    <div class="toggle-btn flex align-ct">
+                        <span>Monthly</span>
+                        <input type="checkbox" id="toggle" name="toggle">
+                        <label for="toggle"></label>
+                        <span>Yearly</span>
+                    </div>
+                </div>
+                <div class="plan-box-container flex justify-sb">
+                    <div class="plan-box flex-48">
+                        <header class="price-header">
+                            <h3 class="heading-clr">Basic</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure veniam molestiae tempora
+                                natus.</p>
+                            <p class="basic-price">48</p>
+                        </header>
+                        <hr>
+                        <ul>
+                            <li class="flex align-ct available"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 tick" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>50 courses a day</li>
+                            <li class="flex align-ct available"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 tick" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>4 forums a month</li>
+                            <li class="flex align-ct available"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 tick" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>16 chapters a day</li>
+                            <li class="flex align-ct not-available"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6 cross" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>Private lessons once a week</li>
+                            <li class="flex align-ct not-available"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6 cross" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>Get weekly reward</li>
+                        </ul>
+                        <a class="price-btn" href="#">Get started</a>
+                    </div>
+                    <div class="plan-box flex-48">
+                        <header class="price-header">
+                            <h3 class="heading-clr">Most popular</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure veniam molestiae tempora
+                                natus.</p>
+                            <p class="basic-price">58</p>
+                        </header>
+                        <hr>
+                        <ul>
+                            <li class="flex align-ct available"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 tick" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>50 courses a day</li>
+                            <li class="flex align-ct available"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 tick" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>4 forums a month</li>
+                            <li class="flex align-ct available"><svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 tick" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>16 chapters a day</li>
+                            <li class="flex align-ct available"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 tick"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>Private lessons once a week</li>
+                            <li class="flex align-ct available"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 tick"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>Get weekly reward</li>
+                        </ul>
+                        <a class="price-btn most-popular-btn" href="#">Get started</a>
+                    </div>
+                </div>
+            </section>
+            <!-- get started -->
+            <section class="get-started">
+                <div class=" flex justify-ct align-ct flex-dir-col">
+                    <h3 class="secondary-heading text-white">Start your 30 days trial now!</h3>
+                    <a class="btn get-started-btn" href="#">get started</a>
+                </div>
+            </section>
+            <!-- footer -->
+            <footer class="footer flex justify-sb">
+                <div class="col-1-3 flex-20">
+                    <a class="brand" href="#">
+                        <h3>TrackL</h3>
+                    </a>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                    <div class="sm-links">
+                        <a class="icon" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="icon margin-l-r" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="icon" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-2-3 flex justify-sb flex-30">
+                    <nav class="site-map">
+                        <ul>
+                            <li id="nav-heading">Features</li>
+                            <li><a href="#">Calendar</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Messanger</a></li>
+                            <li><a href="#">Schedule</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="site-map">
+                        <ul>
+                            <li id="nav-heading">Support</li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Career</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Security</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-3-3 flex-20 justify-ed">
+                    <nav class="contact-details">
+                        <ul>
+                            <li id="nav-heading">Contact</li>
+                            <li>hello@trackl.io</li>
+                            <li>(+91) 900 000 000</li>
+                        </ul>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+    </main>
+</body>
+
+</html>
