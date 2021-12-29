@@ -1,0 +1,859 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/* custom styles */
+
+:root{
+    --primary-clr: #59bfc2;
+    --heading-clr: #314377;
+    --primary-text: rgb(49, 67, 119, 0.3);
+    --primary-text2: rgb(121, 135, 177);
+
+}
+
+*, 
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    /* max-width: 1200px; */
+    line-height: 1.2;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* flex */
+
+.flex{
+    display: flex;
+}
+
+.justify-sb{
+    justify-content: space-between;
+}
+
+.justify-ct{
+    justify-content: center;
+}
+
+.justify-ed{
+    justify-content: flex-end;
+}
+
+.align-ct{
+    align-items: center;
+}
+
+.flex-20{
+    flex: 0 1 20%;
+}
+
+.flex-25{
+    flex: 0 1 25%;
+}
+
+.flex-30{
+    flex: 0 1 33%;
+}
+
+.flex-48{
+    flex: 0 1 48%;
+}
+
+.flex-50{
+    flex: 0 1 50%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.flex-dir-col{
+    flex-direction: column;
+}
+
+.text-white{
+    color: #fff;
+}
+
+.heading-clr{
+    color: var(--heading-clr);
+}
+
+.border{
+    border: 1px solid red;
+}
+
+/* header */
+.header{
+    padding: 1rem 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.hamburger-icon{
+    display: none;
+}
+
+.brand h3{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.navbar{
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.navbar li{
+    margin-left: 1.2rem;
+}
+
+.navbar li a{
+    color: #fff;
+}
+
+.hamburger-btn{
+    display: none;
+}
+
+
+/* hero */
+
+.hero{
+    background-color: var(--primary-clr);
+    width: 98.7vw;
+    height: 100vh;
+}
+
+.hero-content{
+    height: 400px;
+}
+
+.heading{
+    font-size: 3rem;
+    font-weight: 600;
+    width: 50%;
+    color: #fff;
+    margin-top: 6rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.btn{
+    font-size: 0.9rem;
+    font-weight: 700;
+    background-color: #fff;
+    color: var(--heading-clr);
+    border-radius: 4px;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.trial-btn{
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+}
+
+.hero-img{
+    position: absolute;
+    bottom: -25%;
+    left: 20%;
+    /* box-shadow: 0 10px 50px -20px rgb(49, 67, 119, 0.3); */
+}
+
+.hero-img::before,
+.hero-img::after{
+    box-shadow: 0px 0px 0px 30px rgb(49, 67, 119, 0.3);
+}
+
+.hero-img::before{
+    content: "";
+    left: 90px;
+    right: 100px;
+    box-shadow: 90px 20px 80px 30px rgb(49, 67, 119, 0.3);
+}
+
+.hero-img img{
+    width: 80%;
+}
+
+/* links */
+.links{
+ margin-top: 15rem;
+ margin-bottom: 3rem;
+}
+
+.links a {
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--primary-text);
+}
+
+.links a[href$="pdf"]::before{
+    content: url("../images/file-pdf-regular.svg");
+    display: inline-block;
+    width: 12px;
+    margin-right: 0.4rem;
+}
+
+.links a[href$="docx"]::before{
+    content: url("../images/file-word-solid.svg");
+    display: inline-block;
+    width: 12px;
+    margin-right: 0.4rem;
+}
+
+.links a[href$="png"]::before{
+    content: url("../images/file-image-regular.svg");
+    display: inline-block;
+    width: 12px;
+    margin-right: 0.4rem;
+}
+
+.links a[href$="mp4"]::before{
+    content: url("../images/file-video-regular.svg");
+    display: inline-block;
+    width: 12px;
+    margin-right: 0.4rem;
+}
+
+/* hr */
+hr{
+    border: 0;
+    border-top: 2px solid rgba(121, 135, 177, 0.2);
+}
+/* analytics graph */
+
+.analytics{
+    margin: 2.5rem;
+}
+
+.analytics .analytics-heading{
+    color: var(--heading-clr);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.analytics p{
+    color: var(--primary-text2);
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.8;
+    margin: 1rem 0;
+}
+
+.learn-btn{
+    display: inline-block;
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    background-color: var(--primary-clr);
+    padding: 0.6rem 1.7rem;
+    color: #fff;
+    margin-top: 0.8rem;
+    width: 9.4rem;
+    text-align: center;
+}
+
+.learn-btn::before{
+    content: "";
+    position: absolute;
+    width: 1.9rem;
+    height: 1.9rem;
+    left: -3px;
+    top: -1px;
+    z-index: 50;
+    background-color:white;
+    transform: translate(-10px,4px) rotate(45deg);
+}
+
+.learn-btn::after{
+    content: "";
+    position: absolute;
+    width: 1.55rem;
+    height: 1.55rem;
+    right: -1.4rem;
+    top: 2px;
+    z-index: 100;
+    background-color: var(--primary-clr);
+    transform: translate(-10px,4px) rotate(45deg);
+}
+
+figure img{
+    width: 100%;
+}
+
+
+/* score table */
+.score-table{
+    margin-top: 1rem;
+}
+
+.score-table .table-heading{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    color: var(--heading-clr);
+    margin-bottom: 2rem;
+}
+
+table{
+    width: 100%;
+    border-spacing: 0;
+}
+
+table thead tr th:first-child{
+    border-top-left-radius: 4px;
+}
+
+table thead tr th:last-child{
+    border-top-right-radius: 4px;
+}
+
+tbody tr, tbody td{
+    border: 1px solid #d3cccc;
+    text-transform:  capitalize;
+    padding: 0.5rem;
+    color: 	#808080;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+thead{
+    background-color: #3d9ea1;
+}
+
+th{
+    color: #fff;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+table tbody tr:nth-child(even){
+    background-color: rgba(153, 199, 201, 0.4);
+}
+
+
+
+
+
+/* get started */
+.get-started{
+    background-color: var(--primary-clr);
+    width: 100%;
+    height: 200px;
+    border-radius: 1.4rem;
+    margin-top: 4rem;
+}
+
+.get-started-btn{
+    padding: 0.7rem 3rem;
+    margin-top: 1.3rem;
+}
+
+.secondary-heading{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.7rem;
+    margin-top: 2.5rem;
+    text-transform: capitalize;
+}
+
+
+/* price-plan */
+
+.plan{
+    margin: 2rem 0 1rem 0;
+}
+
+.price-plan-heading{
+    font-weight: 600;
+    text-align: center;
+    width: 25%;
+    margin-bottom: 1.4rem;
+}
+/* toggle button */
+
+.toggle-btn span{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+#toggle{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.toggle-btn label{
+    display: block;
+    position: relative;
+    width: 55px;
+    height: 25px;
+    background-color: rgba(89, 191, 194, 0.38);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 0 0.7rem 0 0.3rem;
+}
+
+.toggle-btn label::after{
+    content: "I";
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: var(--primary-clr);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: 0.5s;
+}
+
+#toggle input:checked + label:after{
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+}
+
+#toggle input:checked + label{
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,0.2);
+}
+
+.toggle-btn label:active:after {
+    width: 20px;
+}
+
+/* price boxes */
+.plan-box-container{
+margin-top: 4rem;
+}
+
+.plan-box{
+    border: 2px solid var(--primary-text);
+    padding: 1.7rem 1rem;
+    border-radius: 20px;
+}
+
+.price-header h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.price-header p{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--primary-text2);
+    text-align: center;
+}
+
+.plan .basic-price{
+    font-size: 2.5rem;
+    color: var(--primary-clr);
+    margin: 1.7rem 0;
+}
+
+.plan .basic-price::before{
+    content: "\20B9";
+    font-size: 1.5rem;
+    margin-right: 0.2rem;
+    vertical-align: bottom;
+    color: var(--primary-clr);
+}
+
+.plan .basic-price::after{
+    content: "/Month";
+    font-size: 0.9rem;
+    margin-left: 0.4rem;
+    color: var(--primary-text2);
+    vertical-align: middle;
+}
+
+.plan-box hr{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgba(121, 135, 177, 0.4);
+    margin: 1em 0;
+}
+
+.tick{
+    color: green;
+}
+
+.cross{
+    color: red;
+}
+
+.available{
+    color: var(--heading-clr);
+}
+
+.not-available{
+    color: var(--primary-text2);
+}
+
+.plan-box li{
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.plan-box li svg{
+    width: 15px;
+    margin-right: 0.4rem;
+}
+
+.plan-box .price-btn{
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--heading-clr);
+    border: 2px solid rgba(121, 135, 177, 0.4);
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 7px;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+.plan-box .most-popular-btn{
+    background-color: var(--primary-clr);
+    color: #fff;
+    border: 0;
+    padding: 0.6rem;
+}
+
+/* footer */
+.footer{
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+.footer .brand {
+    display: inline-block;
+}
+.footer .brand h3{
+    color: var(--heading-clr);
+    font-size: 1.4rem;
+}
+
+.footer p {
+    color: var(--primary-text2);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+.sm-links .icon{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--primary-clr);
+    color: #fff;
+}
+
+.sm-links .margin-l-r{
+    margin: 0 1rem;
+}
+
+
+#nav-heading{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--heading-clr);
+}
+
+.site-map li, .contact-details li{
+    margin-bottom: 0.5rem;
+}
+
+.site-map li a, .site-map li{
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--primary-text2);
+    text-transform: capitalize;
+}
+
+.contact-details{
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--primary-text2);
+}
+
+/* responsive */
+
+@media (max-width: 768px) and (min-width: 400px) {
+        html{
+            font-size: 11px;
+        }
+        /* hamburger menu */
+        .hamburger-btn, .navbar{
+            display: none;
+        }
+
+        .hamburger-icon{
+            width: 15px;
+            color: #fff;
+            position: relative;
+            z-index: 99;
+        }
+
+        .header #hamburger-btn:checked ~ .navbar{
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            padding-top: 12rem;
+            text-align: center;
+            background-color: rgba(78, 76, 76, 0.9);
+            z-index: 9;
+        }
+
+        .header #hamburger-btn:checked ~ .navbar > ul{
+            display: inline-block;
+            z-index: 999;
+        }
+
+        .header #hamburger-btn:checked ~ .navbar > ul > li{
+            margin: 3rem 0;
+        }
+        
+        .header #hamburger-btn:checked ~ .navbar > .nav-items > li> a{
+            z-index: 999;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        /* hero */
+        .hero{
+            height: 50vh;
+            width: 100vw;
+        }
+
+        .hero-img{
+            position: absolute;
+            bottom: 40%;
+            left: 20%;
+        }
+
+        /* learn btn */
+        .learn-btn::after{
+            right: -1.7rem;
+            top: 0px;
+        }
+        
+        /* price plan */
+        .price-plan-heading{
+            width: 30%;
+        }
+
+        /* get started */
+        .get-started{
+            height: 150px;
+        }
+
+        .get-started .secondary-heading{
+            margin-top: 3.5rem;
+        }
+        
+}
+
+
+@media screen and  (max-width: 400px){
+    html{
+        font-size: 11px;
+    }
+    /* hamburger menu */
+    .hamburger-btn, .navbar{
+        display: none;
+    }
+
+    .hamburger-icon{
+        width: 15px;
+        color: #fff;
+        position: relative;
+        z-index: 99;
+    }
+
+    .header #hamburger-btn:checked ~ .navbar{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        padding-top: 12rem;
+        text-align: center;
+        background-color: rgba(78, 76, 76, 0.9);
+        z-index: 9;
+    }
+
+    .header #hamburger-btn:checked ~ .navbar > ul{
+        display: inline-block;
+        z-index: 999;
+    }
+
+    .header #hamburger-btn:checked ~ .navbar > ul > li{
+        margin: 3rem 0;
+    }
+    
+    .header #hamburger-btn:checked ~ .navbar > .nav-items > li> a{
+        z-index: 999;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    .heading{
+        font-size: 2rem;
+        width: 80%;
+        margin-top: -4rem;
+    }
+
+    .hero{
+        height: 50vh;
+        width: 100vw;
+    }
+
+    .hero-img{
+        position: absolute;
+        bottom: 43%;
+        left: 20%;
+    }
+
+    .links{
+         margin-top: 8rem;
+    }
+
+    .links a{
+        font-size: 0.9rem;
+    }
+
+    /* analytics */
+    .analytics article{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .analytics .learn-btn{
+        margin-top: 0.3rem;
+        margin-bottom: 2rem;
+    }
+
+    .learn-btn::after{
+        right: -1.7rem;
+        top: 0px;
+    }
+
+    .analytics-heading{
+        margin-top: 1rem;
+        text-transform: capitalize;
+    }
+
+    .price-plan-heading{
+        width: 80%;
+    }
+
+    /* get started */
+    .get-started{
+        height: 120px;
+    }
+
+    /* sm links */
+    .sm-links{
+        display: flex;
+        line-height: 0.5;
+    }
+}
+
+
